@@ -1,0 +1,67 @@
+//main: ../master.scss
+
+.module-container{
+	width: 100%;
+	display: inline-block;
+	background-color: $color-white;
+	border: 1px solid $color-alto;
+	border-radius: 4px;
+	color: $color-dove;
+	&:not(:last-child){
+		margin-bottom: 1.5rem;
+	}
+	.module-head{
+		height: 49px;
+		display: flex;
+		align-items: center;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		padding-left: 1.5rem;
+		border-bottom: 1px solid $color-alto;
+		.module-title{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #191919;
+			font-size: 1rem;
+			line-height: 1;
+			padding-bottom: .25rem;
+			margin-bottom: 0;
+		}
+		.module-actions{
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+			padding-right: .5rem;
+			.item{
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				margin-left: .5rem;
+				padding: 0;
+				border-radius: 3px;
+				i{
+					font-size: 1.5rem;
+					color: $color-text;
+				}
+				&:hover{
+					background-color: $color-gallery;
+					i{
+						color: $color-shaft;
+					}
+				}
+			}
+		}
+	}
+	.module-content{
+		padding: 1.5rem;
+		p{
+			color: $color-text;
+			font-size: .875rem;
+			word-wrap: break-word;
+		}
+	}
+}

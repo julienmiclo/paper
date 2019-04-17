@@ -1,0 +1,39 @@
+//main: ../master.scss
+
+.button{
+	background-color: $color-primary;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: $color-white;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.25;
+	padding: .5rem 1rem;
+	&:hover{
+		background-color: $color-primary-hover;
+		background-image: none;
+		text-decoration: none;
+	}
+	&:active{
+		background-color: $color-primary-active;
+		background-image: none;
+		box-shadow: none;
+	}
+	&.small{
+		font-size: 12px;
+		padding: 4px 15px;
+	}
+	&.large{
+		padding:7px 18px 8px;
+	}
+	&.huge{
+		font-size: 18px;
+		padding: 9px 22px 11px;
+		&.icon{
+			width: 22px;
+			height: 22px;
+		}
+	}
+}

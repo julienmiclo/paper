@@ -1,0 +1,155 @@
+//main: ../master.scss
+
+.inputs{
+	position: relative;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	margin-left: -.5rem;
+	margin-right: -.5rem;
+	.input{
+		margin-right: .5rem;
+		margin-left: .5rem;
+		margin-bottom: 0;
+
+	}
+}
+
+.input{
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	width: 100%;
+	position: relative;
+	margin-bottom: 1rem;
+	&.error{
+		input{
+			border-color: $color-error;
+			padding-right: 2rem;
+		}
+		&:after{
+			content: 'cancel';
+			font-family: $font-icons;
+			font-size: 1.125rem;
+			color: $color-error;
+			position: absolute;
+			right: .5rem;
+			bottom: .35rem;
+		}
+	}
+	&.success{
+		input{
+			border-color: $color-success;
+			padding-right: 2rem;
+		}
+		&:after{
+			content: 'check_circle';
+			font-family: $font-icons;
+			font-size: 1.125rem;
+			color: $color-success;
+			position: absolute;
+			right: .5rem;
+			bottom: .35rem;
+		}
+	}
+
+	label{
+		display: block;
+		margin-bottom: .25rem;
+		color: $color-shaft;
+		font-size: .875rem;
+		font-weight: 600;
+	}
+	input,
+	textarea{
+		width: 100%;
+		border: 1px solid $color-border;
+		border-radius: 3px;
+		line-height: 1.25;
+		padding: .5rem .725rem;
+		&:hover{
+			border-color: $color-shaft;
+		}
+		&:focus{
+			border-color: $color-primary;
+		}
+	}
+	textarea{
+		min-height: 120px;
+		resize: vertical;
+	}
+
+	.input-group{
+		display: flex;
+		input{
+			flex: 1 1 auto;
+		}
+		&.success{
+			.input-text{
+				color: $color-success;
+				&:after{
+					content: 'check_circle'
+				}
+			}
+		}
+		&.error{
+			.input-text{
+				color: $color-error;
+				&:after{
+					content: 'cancel'
+				}
+			}
+		}
+		.input-text{
+			display: flex;
+			align-items: center;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: $color-dove;
+			text-align: center;
+			white-space: nowrap;
+			background-color: $color-alabaster;
+			border: 1px solid $color-border;
+			&:after{
+				font-size: 1.125rem;
+				font-family: $font-icons;
+			}
+		}
+		&.append{
+			input{
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+			.input-text{
+				border-left: 0;
+				&:not(:last-child){
+					margin-right: -1px;
+				}
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+				&:after{
+					margin-left: .5rem;
+				}
+			}
+		}
+		&.prepend{
+			input{
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+			.input-text{
+				border-right: 0;
+				&:not(:first-child){
+					margin-left: -1px;
+				}
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+				&:after{
+					margin-right: .5rem;
+				}
+			}
+		}
+	}
+}

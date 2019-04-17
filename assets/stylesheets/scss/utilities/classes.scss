@@ -1,0 +1,127 @@
+//main: ../master.scss
+
+
+.background-image{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+button{
+	border: 0;
+	background: none;
+	text-shadow: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+	margin: 0;
+}
+
+.flex-top{margin-bottom: auto;}
+.flex-left{margin-right: auto;}
+.flex-bottom{margin-top: auto;}
+.flex-right{margin-left: auto;}
+.flex-center{justify-content: center;}
+.flex-middle{align-items: center;}
+
+.margin{
+	&-tiny{padding: .25rem;}
+	&-light{padding: .5rem;}
+	&-medium{padding: 1rem;}
+	&-large{padding: 1.5rem;}
+	&-big{padding: 2rem;}
+	&-top{
+		&-tiny{margin-top: .25rem;}
+		&-light{margin-top: .5rem;}
+		&-medium{margin-top: 1rem;}
+		&-large{margin-top: 1.5rem;}
+		&-big{margin-top: 2rem;}
+	}
+	&-left{
+		&-tiny{margin-left: .25rem;}
+		&-light{margin-left: .5rem;}
+		&-medium{margin-left: 1rem;}
+		&-large{margin-left: 1.5rem;}
+		&-big{margin-left: 2rem;}
+	}
+	&-bottom{
+		&-tiny{margin-bottom: .25rem;}
+		&-light{margin-bottom: .5rem;}
+		&-medium{margin-bottom: 1rem;}
+		&-large{margin-bottom: 1.5rem;}
+		&-big{margin-bottom: 2rem;}
+	}
+	&-right{
+		&-tiny{margin-right: .25rem;}
+		&-light{margin-right: .5rem;}
+		&-medium{margin-right: 1rem;}
+		&-large{margin-right: 1.5rem;}
+		&-big{margin-right: 2rem;}
+	}
+	&-col{margin-left: 1rem; margin-right: 1rem;}
+	&-row{margin-top: 1rem; margin-bottom: 1rem;}
+	&-center{margin-left: auto; margin-right: auto;}
+	&-none{margin: 0;}
+}
+
+.padding{
+	&-tiny{padding: .25rem;}
+	&-light{padding: .5rem;}
+	&-medium{padding: 1rem;}
+	&-large{padding: 1.5rem;}
+	&-big{padding: 2rem;}
+	&-top{
+		&-tiny{padding-top: .25rem;}
+		&-light{padding-top: .5rem;}
+		&-medium{padding-top: 1rem;}
+		&-large{padding-top: 1.5rem;}
+		&-big{padding-top: 2rem;}
+	}
+	&-left{
+		&-tiny{padding-left: .25rem;}
+		&-light{padding-left: .5rem;}
+		&-medium{padding-left: 1rem;}
+		&-large{padding-left: 1.5rem;}
+		&-big{padding-left: 2rem;}
+	}
+	&-bottom{
+		&-tiny{padding-bottom: .25rem;}
+		&-light{padding-bottom: .5rem;}
+		&-medium{padding-bottom: 1rem;}
+		&-large{padding-bottom: 1.5rem;}
+		&-big{padding-bottom: 2rem;}
+	}
+	&-right{
+		&-tiny{padding-right: .25rem;}
+		&-light{padding-right: .5rem;}
+		&-medium{padding-right: 1rem;}
+		&-large{padding-right: 1.5rem;}
+		&-big{padding-right: 2rem;}
+	}
+	&-col{padding-left: 1rem; padding-right: 1rem;}
+	&-row{padding-top: 1rem; padding-bottom: 1rem;}
+	&-none{padding: 0;}
+}
+
+
+[data-number]{
+	position: relative;
+	&:after{
+		content: attr(data-number);
+		display: block;
+		font-family: $font-open;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		font-size: 10px;
+		font-weight: 700;
+		transform: translate(-50%,-50%);
+		margin-top: 2px;
+	}
+}
