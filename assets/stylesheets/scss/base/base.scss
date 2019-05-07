@@ -73,9 +73,28 @@ body{
 		height: 100vh;
 		flex-grow: 0;
 		flex-shrink: 0;
+		padding: 2rem;
 		background-color: $color-gallery;
 		border-right: 1px solid $color-border;
 		transition: transform 350ms;
+		h4{
+			font-size: 1.25rem;
+		}
+		.menu{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			margin-bottom: 3rem;
+			li{
+				margin-bottom: .125rem;
+				a{
+					color: $color-dove;
+					&:hover{
+						color: $color-shaft;
+					}
+				}
+			}
+		}
 	}
 	.container-page{
 		position: relative;
@@ -95,8 +114,27 @@ body{
 			padding: .5rem 2rem;
 			.page-title{
 				margin-bottom: 0;
+				margin-right: 2rem;
 				font-size: 1rem;
 				color: $color-dove;
+			}
+			.container-search {
+				position: relative;
+				width: 100%;
+				i {
+					position: absolute;
+					top: 50%;
+					left: .5rem;
+					transform: translateY(-50%);
+					color: $color-dove;
+				}
+				input{
+					width: 100%;
+					padding-left: 2rem;
+					&:focus{
+						border-color: $color-primary-active;
+					}
+				}
 			}
 		}
 		.container-page-content{
