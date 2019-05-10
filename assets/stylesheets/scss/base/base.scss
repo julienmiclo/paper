@@ -130,7 +130,13 @@ body{
 				}
 				input{
 					width: 100%;
-					padding-left: 2rem;
+					border: 1px solid $color-border;
+					border-radius: 3px;
+					line-height: 1.25;
+					padding: .5rem .725rem .5rem 2rem;
+					&:hover{
+						border-color: $color-shaft;
+					}
 					&:focus{
 						border-color: $color-primary-active;
 					}
