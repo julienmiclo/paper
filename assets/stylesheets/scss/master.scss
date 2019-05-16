@@ -1,5 +1,7 @@
 // compileCompressed: ../master.css, sourceMap: true
 
+@import "../../libraries/select2/select2.min.scss";
+
 @import "./utilities/variables.scss";
 @import "./utilities/classes.scss";
 
@@ -11,3 +13,5 @@
 @import "./components/account.scss";
 
 @import "./modules/base.scss";
+@import "./modules/agenda.scss";
+@import "./modules/list.scss";

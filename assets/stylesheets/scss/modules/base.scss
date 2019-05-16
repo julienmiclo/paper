@@ -1,5 +1,21 @@
 //main: ../master.scss
 
+.modules-row{
+	width: calc(100% + 1.5rem);
+	display: flex;
+	align-items: flex-start;
+	margin-left: -.725rem;
+	margin-right: -.725rem;
+	&:not(:last-child){
+		margin-bottom: 1.5rem;
+	}
+	.module-container{
+		margin-bottom: 0;
+		margin-left: .725rem;
+		margin-right: .725rem;
+	}
+}
+
 .module-container{
 	width: 100%;
 	display: inline-block;
@@ -7,9 +23,6 @@
 	border: 1px solid $color-alto;
 	border-radius: 4px;
 	color: $color-dove;
-	&:not(:last-child){
-		margin-bottom: 1.5rem;
-	}
 	.module-head{
 		height: 49px;
 		display: flex;
@@ -33,6 +46,10 @@
 			display: flex;
 			align-items: center;
 			padding-right: .5rem;
+			.button{
+				font-size: 12px;
+				height: 32px;
+			}
 			.item{
 				cursor: pointer;
 				display: flex;

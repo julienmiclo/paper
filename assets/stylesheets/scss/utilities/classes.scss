@@ -29,6 +29,7 @@ img{
 .flex-right{margin-left: auto;}
 .flex-center{justify-content: center;}
 .flex-middle{align-items: center;}
+.noshrink{flex-shrink: 0;}
 
 .margin{
 	&-tiny{padding: .25rem;}
