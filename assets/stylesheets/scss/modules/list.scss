@@ -1,0 +1,68 @@
+//main: ../master.scss
+
+.wrap-list{
+	.item{
+		font-size: .875rem;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		border-top: 1px solid $color-border;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&:hover{
+			background-color: $color-alabaster;
+		}
+		&.logged{
+			.status{
+				&:after{
+					background-color: $color-logged;
+				}
+			}
+		}
+		&.sleeped{
+			.status{
+				&:after{
+					background-color: $color-sleeped;
+				}
+			}
+		}
+		&.nologged{
+			.status{
+				&:after{
+					background-color: $color-nologged;
+				}
+			}
+		}
+		&:first-of-type{
+			border-top-color: transparent;
+		}
+		> div:first-child{
+			padding-top: .5rem;
+		}
+		> div:last-child{
+			padding-top: .5rem;
+		}
+		> div {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			padding: .5rem 1rem;
+			&.status{
+				padding-right: 0;
+				&:after{
+					content: '';
+					display: block;
+					width: .5rem;
+					height: .5rem;
+					background-color: $color-chalice;
+					border-radius: 50%;
+				}
+			}
+
+			&.email{
+				font-weight: 700;
+			}
+		}
+	}
+}
