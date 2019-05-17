@@ -12,6 +12,7 @@
 		&:hover{
 			background-color: $color-alabaster;
 		}
+		&.active,
 		&.logged{
 			.status{
 				&:after{
@@ -19,6 +20,7 @@
 				}
 			}
 		}
+		&.waiting,
 		&.sleeped{
 			.status{
 				&:after{
@@ -26,6 +28,7 @@
 				}
 			}
 		}
+		&.close,
 		&.nologged{
 			.status{
 				&:after{
@@ -59,8 +62,18 @@
 					border-radius: 50%;
 				}
 			}
-
-			&.email{
+		}
+	}
+	&.projects-list{
+		.item{
+			.name{
+				font-weight: 700;
+			}
+		}
+	}
+	&.users-list{
+		.item{
+			.email{
 				font-weight: 700;
 			}
 		}
