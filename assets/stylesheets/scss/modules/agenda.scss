@@ -1,112 +1,120 @@
 //main: ../master.scss
 
-.wrap-actions-agenda{
-	margin-bottom: 1rem;
+.wrap-actions-agenda {
+  margin-bottom: 1rem;
 }
 
-.wrap-agenda{
-	border: 1px solid $color-alto;
-	border-radius: 3px;
-	.header-agenda{
-		width: 100%;
-		.metas-dates{
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			.day{
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding: 1rem;
-				&.current{
-					.meta-date-name{
-						color: $color-primary;
-					}
-					.meta-date-number{
-						color: rgba($color-primary, .45);
-					}
-				}
-				.meta-date-name{
-					font-size: 14px;
-					font-weight: 700;
-					color: $color-black;
-				}
-				.meta-date-number{
-					font-size: 14px;
-					color: rgba($color-black, .45);
-				}
-			}
-
-		}
-	}
-	.body-agenda{
-		border-top: 1px solid $color-alto;
-		.metas-columns{
-			width: 100%;
-			display: flex;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			.day{
-				position: relative;
-				width: 100%;
-				&:not(:last-child):after{
-					content: '';
-					display: block;
-					height: 100%;
-					position: absolute;
-					right: 0;
-					top: 0;
-					border-right: 1px solid $color-alto;
-				}
-				&.day-off{
-					background: repeating-linear-gradient(-45deg, $color-alabaster, $color-alabaster 16px, $color-gallery 16px, $color-gallery 32px);
-				}
-			}
-		}
-		.event{
-			font-size: 12px;
-			display: flex;
-			width: calc(100% - 5px);
-			border-radius: 3px;
-			border: 1px solid rgba($color-primary, .65);
-			background-color: rgba($color-primary, .15);
-			height: 80px;
-			margin: 2px;
-			padding: .25rem .5rem;
-			color: $color-primary;
-			.content{
-				width: 100%;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				.meta-title{
-					display: block;
-					font-weight: 700;
-				}
-				.meta-place,
-				.meta-hours{
-					display: block;
-					margin-bottom: .25rem;
-				}
-				.meta-message{
-					display: block;
-				}
-			}
-			.handler{
-				cursor: grab;
-				flex-shrink: 0;
-				margin-left: auto;
-				&:before{
-					content: 'drag_indicator';
-					font-family: $font-icons;
-					font-size: 1rem;
-				}
-			}
-
-		}
-	}
+.wrap-agenda {
+  border: 1px solid $color-alto;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  .header-agenda {
+    width: 100%;
+    .metas-dates {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .day {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        &.current {
+          .meta-date-name {
+            color: $color-primary;
+          }
+          .meta-date-number {
+            color: rgba($color-primary, 0.45);
+          }
+        }
+        .meta-date-name {
+          font-size: 14px;
+          font-weight: 700;
+          color: $color-black;
+        }
+        .meta-date-number {
+          font-size: 14px;
+          color: rgba($color-black, 0.45);
+        }
+      }
+    }
+  }
+  .body-agenda {
+    height: 100%;
+    border-top: 1px solid $color-alto;
+    .metas-columns {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .day {
+        position: relative;
+        width: 100%;
+        &:not(:last-child):after {
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          border-right: 1px solid $color-alto;
+        }
+        &.day-off {
+          background: repeating-linear-gradient(
+            -45deg,
+            $color-alabaster,
+            $color-alabaster 16px,
+            $color-gallery 16px,
+            $color-gallery 32px
+          );
+        }
+      }
+    }
+    .event {
+      font-size: 12px;
+      display: flex;
+      width: calc(100% - 5px);
+      border-radius: 3px;
+      border: 1px solid rgba($color-primary, 0.65);
+      background-color: rgba($color-primary, 0.15);
+      height: 80px;
+      margin: 2px;
+      padding: 0.25rem 0.5rem;
+      color: $color-primary;
+      .content {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .meta-title {
+          display: block;
+          font-weight: 700;
+        }
+        .meta-place,
+        .meta-hours {
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+        .meta-message {
+          display: block;
+        }
+      }
+      .handler {
+        cursor: grab;
+        flex-shrink: 0;
+        margin-left: auto;
+        &:before {
+          content: "drag_indicator";
+          font-family: $font-icons;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
