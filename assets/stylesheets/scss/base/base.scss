@@ -20,6 +20,10 @@ body {
   font-family: $font-open;
   font-size: 16px;
   line-height: 1.4;
+  background: #36c827;
+  background: -webkit-radial-gradient(top right, #36c827, #bfe57a);
+  background: -moz-radial-gradient(top right, #36c827, #bfe57a);
+  background: radial-gradient(to bottom left, #36c827, #bfe57a);
 }
 
 .app {
